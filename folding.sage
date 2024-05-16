@@ -1,13 +1,14 @@
 from scipy.optimize import newton
 
 load("ISD.sage")
+import numpy
 
 A.<X> = QQ[]
 
 
 def h(q, x):
     """q-ary entropy function."""
-    return -x * log(x / (q - 1), q) - (1 - x) * log(1 - x, q)
+    return -x * numpy.math.log(x/(q-1), q) - (1 - x) * numpy.math.log(1 - x, q)
 
 
 def GV(R, q=4):
@@ -81,7 +82,7 @@ def min_complexity_fold(t, q=4, c=4):
     - c: Compression factor
     """
     gv=GV(1-1/c,q)
-    s_fold=ceil(log(t/gv, q-1))
+    s_fold=ceil(numpy.math.log(t/gv, q-1))
     N = (q-1)^s_fold
     Cmin = oo
     for ISD in ISDs.values():
@@ -259,7 +260,7 @@ def expect_cost(c, t, s, q=4, ISD_l=None, verbose=False, offset=0):
     R = 1-1/c
     gv = GV(R, q)
 
-    fold_s = ceil(log((t)/gv, q-1))+offset
+    fold_s = ceil(numpy.math.log(t/gv, q-1))+offset
     s_H = s-fold_s
     np=(q-1)^fold_s
     l=(q-1)^(s_H)
@@ -318,7 +319,7 @@ def prepare_ISD_list(c, t, s, q, ISD_l=None, verbose=False):
     """
     R=1-1/c
     gv=GV(R, q)
-    fold_s = ceil(log(t/gv, q-1)) # folding as close to GV bound as possible
+    fold_s = ceil(numpy.math.log(t/gv, q-1)) # folding as close to GV bound as possible
     n=c*(q-1)^fold_s
     k=(c-1)*(q-1)^fold_s
 
