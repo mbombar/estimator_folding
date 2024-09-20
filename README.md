@@ -1,4 +1,9 @@
-# Estimator complexity for F4-OLE
+# Estimator complexity for $\mathbb{F}_{4}$ OLEAGE PCG
+
+Sage script to select parameters for the $\mathbb{F}_4$ OLEAGE Pseudorandom Correlation Generator (PCG).
+See the [paper](https://eprint.iacr.org/2024/429.pdf) for details.
+
+We also provide a prototype [implementation](https://github.com/sachaservan/FOLEAGE-PCG) of the PCG in C.
 
 ## How to run the estimator
 
