@@ -70,3 +70,29 @@ following the same template as the other algorithms already there.
 Once it is implemented, you can add it to the dictionnary `ISDs` at
 the end. This is the one that will be exposed in `Folding.sage`. There
 is no need to change the main file.
+
+
+## Citation
+
+```
+@inproceedings{BBCCDS24,
+  author       = {Maxime Bombar and
+                  Dung Bui and
+                  Geoffroy Couteau and
+                  Alain Couvreur and
+                  Clément Ducros and
+                  Sacha Servan-Schreiber},
+  title        = {FOLEAGE: $\mathbb{F}_{4}$OLE-Based Multi-Party
+                  Computation for Boolean Circuits},
+  note         = {\url{https://eprint.iacr.org/2024/429}},
+  editor       = {Kai-Min Chung and
+                  Yu Sasaki},
+  booktitle    = {Advances in Cryptology - {ASIACRYPT} 2024 - 30th
+                  International Conference on the Theory and
+                  Application of Cryptology and Information Security,
+                  Kolkata, India, December 9-13, 2024 %
+                  },
+  publisher    = {Springer},
+  year         = {2024},
+}
+```
