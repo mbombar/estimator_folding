@@ -7,9 +7,13 @@ Includes:
  - Stern-Dumer over Fq
  - Stern-Dumer over Fq with improvements from [P09]
  - MMT over Fq
+
+
+The level of aggressivity in the parameters selection is controlled by
+the variables conservative and csplit.
 """
 
-conservative=False # If true, then do not precisely count some polynomial factors which might be won back
+conservative=False # If true, then ignore some polynomial factors to be as conservative as possible.
 csplit=False # Applies a penalty for being csplit
 
 def Tgauss(n, k):
