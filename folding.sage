@@ -1,4 +1,5 @@
 from scipy.optimize import newton
+from math import log
 
 load("ISD.sage")
 
