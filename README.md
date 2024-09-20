@@ -1,4 +1,4 @@
-# Estimator complexity for $\mathbb{F}_{4}$ OLEAGE PCG
+# Estimator complexity for the $\mathbb{F}_{4}$ OLEAGE PCG
 
 Sage script to select parameters for the $\mathbb{F}_4$ OLEAGE Pseudorandom Correlation Generator (PCG).
 See the [paper](https://eprint.iacr.org/2024/429.pdf) for details.
@@ -20,7 +20,7 @@ We also provide a prototype [implementation](https://github.com/sachaservan/FOLE
  
  [...]
  
-	Computing the probability that the folded error has weight 14
+Computing the probability that the folded error has weight 14
 Prange --> 181.08545120625692
 Lee-Brickell --> 169.5462959218013
 Stern --> 175.78460971203532
