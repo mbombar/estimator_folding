@@ -17,16 +17,12 @@ def Tgauss(n, k):
     Lower bound on the cost Gaussian elimination.
     Favors the attacker.
     """
-    # if not conservative:
-    #     return 100*n*(n-k)*log(n)*log(n-k)
-    # else:
     return n*(n-k)
 
 def c_split_loss(n, t, c):
     """
     Penalty for having the error regularly split into c blocks
     """
-    # print(f"n={n}, t={t}, c={c}")
     if csplit:
         return float(log(binomial(n/c, t/c)^c/binomial(n, t), 2))
     else:
@@ -123,7 +119,6 @@ def Stern(t, k, n, q, p, ell, verbose=False):
     else:
         C_iter = L*(n-k-ell)*(k+ell) + 2*ell*(k+ell)*L_1 + L*ell
 
-    # print(f"Stern(t={t}, k={k}, p={p}, ell={ell})\nC_iter={float(C_iter)}")
     P_succ = (binomial(n-k-ell, t-p)*binomial(floor((k+ell)/2), floor(p/2))^2)/binomial(n, t)
     if P_succ == 0:
         return oo
